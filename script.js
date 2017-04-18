@@ -19,9 +19,10 @@ btn.addEventListener("click", function(){
 
 function renderHtml(data){
     var htmlString = "";
-    
-    for(i=0; i<=data.length; i++){
-        htmlString += "<p>" + data[i].products.Price + "</p>";
+    var c = data.products;
+    for(i=0; i<c.length; i++){
+        console.log(c[i].Price);
+        htmlString += "<p>" + c[i].Price + "</p>";
     }
     dynamicContainer.insertAdjacentHTML("beforeend", htmlString);
 };
